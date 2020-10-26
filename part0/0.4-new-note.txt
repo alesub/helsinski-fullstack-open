@@ -1,0 +1,20 @@
+title Notes page - User submission
+
+note left of Browser: User types in text field
+Browser->Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+note right of Server: New note storage
+Server-->Browser: Return 302 redirect response to https://studies.cs.helsinki.fi/exampleapp/notes
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+Server-->Browser: HTML-code
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Server-->Browser: main.css
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+Server-->Browser: main.js
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server-->Browser: data.json
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/favicon.ico
+Server-->Browser: favicon.ico
+note left of Browser:
+Browser executes js code to display
+the data.json file contents in the HTML code.
+end note
