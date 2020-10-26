@@ -1,0 +1,25 @@
+title Single Page App - New note submission
+
+note over browser:
+User types in text field and submits form
+end note
+
+note over browser:
+spa.js captures form submit event
+end note
+
+note over browser:
+spa.js appends new note on html
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over server:
+Server saves note in memory
+end note
+
+server-->browser: Json response: [{"message":"note created"}]
+
+note over browser:
+spa.js logs server response in console
+end note
