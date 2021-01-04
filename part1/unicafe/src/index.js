@@ -20,10 +20,20 @@ const App = () => {
   const [good, setGood] = useState(0)
   const [neutral, setNeutral] = useState(0)
   const [bad, setBad] = useState(0)
+  const [all, setAll] = useState(0)
 
-  const giveGoodFeedback = () => setGood(good + 1)
-  const giveNeutralFeedback = () => setNeutral(neutral + 1)
-  const giveBadFeedback = () => setBad(bad + 1)
+  const giveGoodFeedback = () => {
+    setGood(good + 1)
+    setAll(all + 1)
+  }
+  const giveNeutralFeedback = () => {
+    setNeutral(neutral + 1)
+    setAll(all + 1)
+  }
+  const giveBadFeedback = () => {
+    setBad(bad + 1)
+    setAll(all + 1)
+  }
 
   return (
     <div>
@@ -45,6 +55,7 @@ const App = () => {
       <Rating text='good' counter={good} />
       <Rating text='neutral' counter={neutral} />
       <Rating text='bad' counter={bad} />
+      <Rating text='all' counter={all} />
     </div>
   )
 }
