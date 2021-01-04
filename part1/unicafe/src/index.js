@@ -9,7 +9,7 @@ const Button = ({handleClick, text}) => {
   )
 }
 
-const Rating = ({text, counter}) => {
+const Stat = ({text, counter}) => {
   return (
     <p>{text}: {counter}</p>
   )
@@ -52,10 +52,10 @@ const App = () => {
       />
 
       <h1>statistics</h1>
-      <Rating text='good' counter={good} />
-      <Rating text='neutral' counter={neutral} />
-      <Rating text='bad' counter={bad} />
-      <Rating text='all' counter={all} />
+      <Stat text='good' counter={good} />
+      <Stat text='neutral' counter={neutral} />
+      <Stat text='bad' counter={bad} />
+      <Stat text='all' counter={all} />
     </div>
   )
 }
