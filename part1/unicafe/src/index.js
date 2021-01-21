@@ -15,6 +15,19 @@ const Stat = ({text, counter}) => {
   )
 }
 
+const Statistics = ({good, neutral, bad}) => {
+  return (
+    <div>
+      <h1>statistics</h1>
+      <Stat text='good' counter={good} />
+      <Stat text='neutral' counter={neutral} />
+      <Stat text='bad' counter={bad} />
+      <Stat text='all' counter={good+neutral+bad} />
+      <Stat text='average' counter={(good-bad)/(good+neutral+bad)} />
+    </div>
+  )
+}
+
 const App = () => {
   // save clicks of each button to its own state
   const [good, setGood] = useState(0)
@@ -46,13 +59,7 @@ const App = () => {
         handleClick={giveBadFeedback}
         text='bad'
       />
-
-      <h1>statistics</h1>
-      <Stat text='good' counter={good} />
-      <Stat text='neutral' counter={neutral} />
-      <Stat text='bad' counter={bad} />
-      <Stat text='all' counter={good+neutral+bad} />
-      <Stat text='average' counter={(good-bad)/(good+neutral+bad)} />
+      <Statistics good={good} neutral={neutral} bad={bad} />
     </div>
   )
 }
