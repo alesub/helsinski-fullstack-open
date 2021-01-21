@@ -24,6 +24,7 @@ const Statistics = ({good, neutral, bad}) => {
       <Stat text='bad' counter={bad} />
       <Stat text='all' counter={good+neutral+bad} />
       <Stat text='average' counter={(good-bad)/(good+neutral+bad)} />
+      <Stat text='positive' counter={good/(good+neutral+bad)*100 + ' %'} />
     </div>
   )
 }
